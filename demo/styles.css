@@ -1,0 +1,39 @@
+﻿body {
+    font-family: Arial, sans-serif;
+}
+
+.tree {
+    list-style-type: none; /* Убираем стандартные маркеры списка */
+    padding-left: 20px; /* Отступ слева для дерева */
+}
+/* https://developer.mozilla.org/ru/docs/Web/CSS/position */
+.tree li {
+    position: relative; /* Устанавливаем позицию для псевдоэлементов */
+    padding: 5px 0; /* Отступы для элементов списка */
+    list-style-type: none; /* Убираем стандартные маркеры списка */
+  
+}
+
+.tree li::before {
+    content: ""; /* Создаем пустой контент для псевдоэлемента */
+    position: absolute; /* Абсолютное позиционирование */
+    left: -10px; /* Сдвиг влево */
+    top: 10px; /* Сдвиг вниз */
+    border-left: 1px solid #000; /* Вертикальная линия */
+    height: 100%; /* Высота линии */
+}
+
+.tree li::after {
+    content: ""; /* Создаем пустой контент для псевдоэлемента */
+    position: absolute; /* Абсолютное позиционирование */
+    left: -10px; /* Сдвиг влево */
+    top: 20px; /* Сдвиг вниз */
+    border-top: 1px solid #000; /* Горизонтальная линия */
+    width: 10px; /* Ширина линии */
+}
+
+
+.tree li:last-child::before {
+    height: 10px; /* Убираем вертикальную линию для последнего элемента */
+}
+

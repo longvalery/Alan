@@ -1,0 +1,223 @@
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+  }
+
+body {
+     background: #000000; 
+     overflow: hidden;
+     font-family: Arial, Helvetica, sans-serif;
+    }  
+
+.solar-system {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+              }   
+.sun {
+      position: absolute;
+      width: 80px;
+      height: 80px;
+      background: radial-gradient(circle, #FDB813, #FF8C00);
+      border-radius: 50%;
+      box-shadow: 0 0 60px #FDB813, 0 0 100px #FF8C00;
+      animation: pulse 4s ease-in-out infinite;
+      z-index: 10;
+     }               
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+        box-shadow: 0 0 60px #FDB813, 0 0 100px #FF8C00;
+             }
+    50% {
+        transform: scale(1.05);
+        box-shadow: 0 0 80px #FDB813, 0 0 120px #FF8C00; 
+        }         
+                 }   
+
+.orbit {
+    position: absolute;
+    border-radius: 50%;
+    outline: 1px dotted rgb(230, 223, 223);
+    animation: rotate-orbit linear infinite;
+    pointer-events: none;
+       }  
+
+@keyframes rotate-orbit {
+    from { transform: rotate(0deg);}
+    to   { transform: rotate(360deg);}
+                  }       
+
+
+.planet {
+    position: absolute; 
+    border-radius: 50%;
+    top: 0;
+    left: 50%;
+    z-index: 1000;
+    pointer-events: auto;
+        }    
+.planet:hover {
+    transform: scale(1.3);
+              }
+        
+
+.mercury {
+    width: 12px;
+    height: 12px;
+    background: radial-gradient(at -5px -5px, #e79784, #922d02);
+         }
+.mercury-orbit {
+    width: 150px;
+    height: 150px;
+    outline-offset: -6px;
+    animation-duration: 8s;
+                }            
+
+.venus-orbit {
+    width: 200px;
+    height: 200px;
+    outline-offset: -9px;
+    animation-duration: 12s;
+            }     
+.venus {
+    width: 18px;
+    height: 18px;
+    background: radial-gradient(at -5px -5px, #91c4ed, #2896f0);
+            }
+
+.earth-orbit {
+    width: 260px;
+    height: 260px;
+    outline-offset: -10px;
+    animation-duration: 16s;
+            }     
+.earth {
+    width: 20px;
+    height: 20px;
+    background: radial-gradient(at -5px -5px, #7188cc, #228b22);
+       } 
+
+.mars-orbit {
+    width: 320px;
+    height: 320px;
+    outline-offset: -8px;
+    animation-duration: 20s;
+            }     
+.mars {
+    width: 16px;
+    height: 16px;
+    background: radial-gradient(at -5px -5px, #e26767, #4a1212);
+            }  
+.jupiter-orbit {
+    width: 420px;
+    height: 420px;
+    animation-duration: 28s;
+    outline-offset: -22px;
+}
+
+.jupiter {
+    width: 45px;
+    height: 45px;
+    background: radial-gradient(farthest-corner at -10px -10px, #efbd7c, #562a0a);
+         }
+
+.saturn-orbit {
+    width: 520px;
+    height: 520px;
+    animation-duration: 36s;
+    outline-offset: -20px;
+              }
+
+.saturn {
+    width: 40px;
+    height: 40px;
+    background: radial-gradient(farthest-corner at -10px -10px, #dab558 , #b28922);
+    position: relative;
+}
+
+.saturn::after {
+    content: "";
+    position: absolute;
+    width: 60px;
+    height: 20px;
+    border: 7px solid #b28922;
+    opacity: 0.4;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+               }
+
+.uranus-orbit {
+    width: 620px;
+    height: 620px;
+    animation-duration: 44s;
+    outline-offset: -14px;
+}
+
+.uranus {
+    width: 28px;
+    height: 28px;
+    background: radial-gradient(farthest-corner at -10px -10px,#55c8dd, #205963);
+}
+
+/* Нептун */
+.neptune-orbit {
+    width: 720px;
+    height: 720px;
+    animation-duration: 52s;
+    outline-offset: -13px;
+}
+
+.neptune {
+    width: 26px;
+    height: 26px;
+    background:radial-gradient(farthest-corner at -10px -10px, #6d8ef2,#2e4a9d) ;
+}
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+.saturn::after {
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 20px;
+    border: 7px solid rgba(218, 165, 32, 0.4);
+    border-radius: 50%; 
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+*/
